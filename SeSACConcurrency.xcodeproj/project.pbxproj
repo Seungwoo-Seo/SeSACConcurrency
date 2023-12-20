@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		577B9C562B328FA2002D8A4A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577B9C552B328FA2002D8A4A /* TestView.swift */; };
+		577B9C582B328FDA002D8A4A /* HostingTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577B9C572B328FDA002D8A4A /* HostingTestView.swift */; };
 		57E6972E2B31258900294ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E6972D2B31258900294ABA /* AppDelegate.swift */; };
 		57E697302B31258900294ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E6972F2B31258900294ABA /* SceneDelegate.swift */; };
 		57E697322B31258900294ABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E697312B31258900294ABA /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		577B9C552B328FA2002D8A4A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		577B9C572B328FDA002D8A4A /* HostingTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTestView.swift; sourceTree = "<group>"; };
 		57E6972A2B31258900294ABA /* SeSACConcurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACConcurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E6972D2B31258900294ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E6972F2B31258900294ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				57E6972D2B31258900294ABA /* AppDelegate.swift */,
 				57E6972F2B31258900294ABA /* SceneDelegate.swift */,
 				57E697312B31258900294ABA /* ViewController.swift */,
+				577B9C552B328FA2002D8A4A /* TestView.swift */,
+				577B9C572B328FDA002D8A4A /* HostingTestView.swift */,
 				57E697332B31258900294ABA /* Main.storyboard */,
 				57E697362B31258F00294ABA /* Assets.xcassets */,
 				57E697382B31258F00294ABA /* LaunchScreen.storyboard */,
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E697322B31258900294ABA /* ViewController.swift in Sources */,
+				577B9C562B328FA2002D8A4A /* TestView.swift in Sources */,
 				57E6972E2B31258900294ABA /* AppDelegate.swift in Sources */,
+				577B9C582B328FDA002D8A4A /* HostingTestView.swift in Sources */,
 				57E697422B31267E00294ABA /* Network.swift in Sources */,
 				57E697302B31258900294ABA /* SceneDelegate.swift in Sources */,
 			);

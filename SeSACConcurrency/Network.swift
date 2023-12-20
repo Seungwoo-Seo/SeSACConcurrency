@@ -115,10 +115,16 @@ class Network {
 
     // 단일
     func fetchThumbnailAsyncAwait(value: String) async throws -> UIImage {
+        print(#function, "1", Thread.isMainThread)
+
         let url = URL(string: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/\(value).jpg")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 5)
 
+        print(#function, "2", Thread.isMainThread)
+
         let (data, response) = try await URLSession.shared.data(for: request)
+
+        print(#function, "3", Thread.isMainThread)
 
         guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
               (200...299).contains(statusCode) else {
@@ -129,14 +135,21 @@ class Network {
             throw NetworkError.invalidImage
         }
 
+        print(#function, "4", Thread.isMainThread)
+
         return image
     }
 
     // 여러개를 순서대로 사용할 때, 하지만 갯수가 명확해야함
+    @MainActor
     func fetchThumbnailAsyncLet() async throws -> [UIImage] {
+        print(#function, "1", Thread.isMainThread)
+
         async let result = Network.shared.fetchThumbnailAsyncAwait(value: "eDps1ZhI8IOlbEC7nFg6eTk4jnb")
         async let result1 = Network.shared.fetchThumbnailAsyncAwait(value: "5Afx73NwXPdgHd3Kt1tU7ig4Vox")
         async let result2 = Network.shared.fetchThumbnailAsyncAwait(value: "9f9YsmXoy9ghqZKIVuKHkmGGZCY")
+
+        print(#function, "2", Thread.isMainThread)
 
         return try await [result, result1, result2]
     }
